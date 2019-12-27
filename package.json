@@ -6,19 +6,24 @@
   "scripts": {
     "build": "npm run clear && webpack --mode=production",
     "dev": "npm run clear && webpack --mode=development",
-    "start": "npm run clear && webpack-dev-server --mode=development --open",
-    "clear": "del-cli dist"
+    "start": "npm run clear && webpack-dev-server --mode=development --open && npm run flow check --all",
+    "clear": "del-cli dist",
+    "flow": "flow"
   },
   "author": "Andrey Suha",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "@babel/cli": "^7.7.7",
     "@babel/core": "^7.7.7",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
     "@babel/plugin-proposal-private-methods": "^7.7.4",
     "@babel/preset-env": "^7.7.7",
+    "@babel/preset-flow": "^7.7.4",
     "babel-loader": "^8.0.6",
     "del-cli": "^3.0.0",
+    "flow-bin": "^0.114.0",
+    "flow-webpack-plugin": "^1.2.0",
     "html-webpack-plugin": "^3.2.0",
     "webpack": "^4.41.4",
     "webpack-cli": "^3.3.10",
