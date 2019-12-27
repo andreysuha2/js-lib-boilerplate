@@ -1,0 +1,27 @@
+{
+  "name": "JsBoilerplate",
+  "version": "0.0.1",
+  "description": "Base webpack config for js librares",
+  "main": "app.js",
+  "scripts": {
+    "build": "npm run clear && webpack --mode=production",
+    "dev": "npm run clear && webpack --mode=development",
+    "start": "npm run clear && webpack-dev-server --mode=development --open",
+    "clear": "del-cli dist"
+  },
+  "author": "Andrey Suha",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-proposal-private-methods": "^7.7.4",
+    "@babel/preset-env": "^7.7.7",
+    "babel-loader": "^8.0.6",
+    "del-cli": "^3.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  }
+}
